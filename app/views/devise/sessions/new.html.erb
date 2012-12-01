@@ -1,0 +1,10 @@
+<% @title = t("devise.sign_in", default: "Sign in") %>
+
+<%= semantic_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.inputs :email, :password %>
+  <%= f.actions do %>
+    <%= f.action :submit, label: t("devise.sign_in", default: "Sign in") %>
+  <% end %>
+<% end %>
+
+<%= link_to(t("devise.forgot_password", default: "Forgot Your Password?"), new_user_password_path) %>
