@@ -28,6 +28,10 @@ And then execute:
 
     $ bundle
 
+Run generator:
+
+    $ rails g active_application:install
+
 ## Support
 
 If you have any questions or issues with ActiveApplication, or if you like to report a bug, please create an [issue on GitHub](https://github.com/jarijokinen/active_application/issues).
