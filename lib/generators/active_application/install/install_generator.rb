@@ -32,7 +32,6 @@ module ActiveApplication
       def setup_test_framework
         if options[:test_framework] == "rspec"
           generate "active_application:rspec"
-          generate "active_application:spork"
         end
       end
 
