@@ -19,7 +19,7 @@ module ActiveApplication
 
       def configure_spork
         sentinel = "config.cache_classes = true"
-        data = "!(ENV['DRB'] == 'true')"
+        data = "config.cache_classes = !(ENV['DRB'] == 'true')"
         gsub_file "config/environments/test.rb", sentinel, data
       end
 
