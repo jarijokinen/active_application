@@ -1,9 +1,10 @@
 module ActiveApplication
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      class_option :user_model,             type: :string, default: "User"
       class_option :authentication_engine,  type: :string, default: "devise"
       class_option :authorization_engine,   type: :string, default: "cancan"
+      class_option :session_store,          type: :string, default: "active_record"
+      class_option :user_model,             type: :string, default: "User"
 
       class_option :skip_bundle,            type: :boolean, default: false
       class_option :skip_clean,             type: :boolean, default: false
@@ -18,6 +19,13 @@ module ActiveApplication
       def install_bundle
         unless options[:skip_bundle]
           generate "active_application:bundle"
+        end
+      end
+
+      def configure_session_store
+        if options[:session_store] == "active_record"
+          gsub_file "config/initializers/session_store.rb", ":cookie_store", ":active_record_store"
+          generate "session_migration"
         end
       end
 
