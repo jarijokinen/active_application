@@ -4,7 +4,15 @@ module ActiveApplication
       class_option :user_model,             type: :string, default: "User"
       class_option :authentication_engine,  type: :string, default: "devise"
       class_option :authorization_engine,   type: :string, default: "cancan"
+
+      class_option :skip_clean,             type: :boolean, default: false
       class_option :skip_routes,            type: :boolean, default: false
+
+      def clean_project
+        unless options[:skip_clean]
+          generate "active_application:clean"
+        end
+      end
 
       def install_authentication
         if options[:authentication_engine] == "devise"
