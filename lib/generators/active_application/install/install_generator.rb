@@ -5,12 +5,19 @@ module ActiveApplication
       class_option :authentication_engine,  type: :string, default: "devise"
       class_option :authorization_engine,   type: :string, default: "cancan"
 
+      class_option :skip_bundle,            type: :boolean, default: false
       class_option :skip_clean,             type: :boolean, default: false
       class_option :skip_routes,            type: :boolean, default: false
 
       def clean_project
         unless options[:skip_clean]
           generate "active_application:clean"
+        end
+      end
+
+      def install_bundle
+        unless options[:skip_bundle]
+          generate "active_application:bundle"
         end
       end
 
