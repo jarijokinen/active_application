@@ -2,7 +2,7 @@
 
 NOTICE: EXPERIMENTAL ALPHA VERSION, DO NOT USE IN PRODUCTION
 
-[![Build Status](https://secure.travis-ci.org/jarijokinen/active_applicatio.png)](http://travis-ci.org/jarijokinen/active_application) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/jarijokinen/active_application)
+[![Build Status](https://secure.travis-ci.org/jarijokinen/active_application.png)](http://travis-ci.org/jarijokinen/active_application) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/jarijokinen/active_application)
 
 ## Features
 
