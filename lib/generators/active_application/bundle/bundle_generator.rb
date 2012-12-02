@@ -6,6 +6,7 @@ module ActiveApplication
       end
 
       def copy_gemfile
+        remove_file "Gemfile"
         template "Gemfile"
       end
 
