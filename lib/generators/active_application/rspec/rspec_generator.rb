@@ -1,6 +1,10 @@
 module ActiveApplication
   module Generators
     class RspecGenerator < Rails::Generators::Base
+      def self.source_root 
+        @source_root ||= File.join(File.dirname(__FILE__), "templates")
+      end
+
       def install_rspec
         generate "rspec:install"
       end
@@ -24,6 +28,7 @@ module ActiveApplication
       end
 
       def setup_spec_helper
+        remove_file "spec/spec_helper.rb"
         template "spec_helper.rb", "spec/spec_helper.rb"
       end
 

@@ -4,7 +4,7 @@ module ActiveApplication
       class_option :authentication_engine,  type: :string, default: "devise"
       class_option :authorization_engine,   type: :string, default: "cancan"
       class_option :session_store,          type: :string, default: "active_record"
-      class_option :test_framework,         type: :string, default: "rspec"
+      class_option :test_environment,       type: :string, default: "rspec"
       class_option :user_model,             type: :string, default: "User"
 
       class_option :skip_bundle,            type: :boolean, default: false
@@ -29,8 +29,8 @@ module ActiveApplication
         end
       end
 
-      def setup_test_framework
-        if options[:test_framework] == "rspec"
+      def setup_test_environment
+        if options[:test_environment] == "rspec"
           generate "active_application:rspec"
         end
       end
