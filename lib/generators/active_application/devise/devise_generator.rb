@@ -15,6 +15,11 @@ module ActiveApplication
         generate "active_record:devise #{self.devise_model.classify}"
       end
 
+      def setup_seeds
+        remove_file "db/seeds.rb"
+        template "seeds.rb", "db/seeds.rb"
+      end
+
 #      def add_route
 #        route "devise_for :#{self.devise_model.tableize}"
 #      end
