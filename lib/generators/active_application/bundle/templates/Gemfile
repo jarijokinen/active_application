@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "<%= Rails.version %>"
-#gem "active_application", "0.0.1"
-gem "active_application", path: "/home/jari/work/gems/active_application"
+gem "active_application", "0.0.1"
 
 group :development, :test do
   gem "capybara", "~> 2.0.1"
