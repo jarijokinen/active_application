@@ -18,7 +18,7 @@ module ActiveApplication
       end
 
       def install_spork
-        run "spork --bootstrap"
+        run "spork --bootstrap", verbose: false, capture: true
       end
 
       def configure_spork
