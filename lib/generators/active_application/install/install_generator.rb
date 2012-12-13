@@ -21,7 +21,7 @@ module ActiveApplication
 
       def setup_bundle
         unless options[:skip_bundle]
-          if options[:edge]
+          if options[:dev]
             generate "active_application:bundle --dev"
           else
             generate "active_application:bundle"
