@@ -10,6 +10,8 @@ module ActiveApplication
       class_option :skip_bundle,            type: :boolean, default: false
       class_option :skip_clean,             type: :boolean, default: false
       class_option :skip_routes,            type: :boolean, default: false
+      
+      class_option :dev,                    type: :boolean, default: false
 
       def clean_project
         unless options[:skip_clean]
@@ -19,7 +21,11 @@ module ActiveApplication
 
       def setup_bundle
         unless options[:skip_bundle]
-          generate "active_application:bundle"
+          if options[:edge]
+            generate "active_application:bundle --dev"
+          else
+            generate "active_application:bundle"
+          end
         end
       end
 
