@@ -6,7 +6,7 @@ describe "Forgot password feature" do
   before :each do
     visit "/"
     click_link "Sign in"
-    click_link "Forgot Your Password?"
+    click_link "Forgot your password?"
     fill_in "Email", with: user.email
     click_button "Send me reset password instructions"
     page.should have_content "You will receive an email with instructions about how to reset your password in a few minutes."
@@ -45,11 +45,11 @@ describe "Forgot password feature" do
     end
 
     it "has a correct title" do
-      page.html.should have_xpath "//title", text: "Change Your Password"
+      page.html.should have_xpath "//title", text: "Change your password"
     end
     
     it "has a correct heading" do
-      page.should have_css "h1", text: "Change Your Password"
+      page.should have_css "h1", text: "Change your password"
     end
 
     it "has a password field" do
@@ -61,7 +61,7 @@ describe "Forgot password feature" do
     end
     
     it "has a change my password button" do
-      page.should have_button "Change My Password"
+      page.should have_button "Change password"
     end
   end
   
@@ -77,7 +77,7 @@ describe "Forgot password feature" do
       before :each do
         fill_in "user_password", with: "newpassword"
         fill_in "user_password_confirmation", with: "newpassword"
-        click_button "Change My Password"
+        click_button "Change password"
       end
       
       it "should redirect to root page" do
@@ -91,7 +91,7 @@ describe "Forgot password feature" do
     
     context "with empty fields" do
       before :each do
-        click_button "Change My Password"
+        click_button "Change password"
       end
 
       it "should not redirect" do
@@ -107,7 +107,7 @@ describe "Forgot password feature" do
       before :each do
         fill_in "user_password", with: "newpassword"
         fill_in "user_password_confirmation", with: "notnewpassword"
-        click_button "Change My Password"
+        click_button "Change password"
       end
 
       it "should not redirect" do
@@ -123,7 +123,7 @@ describe "Forgot password feature" do
       before :each do
         fill_in "user_password", with: "new45"
         fill_in "user_password_confirmation", with: "new45"
-        click_button "Change My Password"
+        click_button "Change password"
       end
 
       it "should not redirect" do

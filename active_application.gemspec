@@ -25,7 +25,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "kaminari", "~> 0.14.1"
   gem.add_dependency "less-rails", "~> 2.2.6"
   gem.add_dependency "modernizr-rails", "~> 2.6.1"
-  gem.add_dependency "simple_resource", "~> 0.3.0"
+  gem.add_dependency "simple_resource", "~> 0.4.0"
   gem.add_dependency "therubyracer", "~> 0.11.2"
   gem.add_dependency "twitter-bootstrap-rails", "~> 2.2.0"
 
