@@ -1,5 +1,5 @@
 require "cancan"
-require "devise"
+require "devise-formtastic"
 require "formtastic-bootstrap"
 require "has_scope"
 require "jquery-rails"
