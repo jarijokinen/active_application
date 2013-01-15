@@ -38,4 +38,4 @@ If you have any questions or issues with ActiveApplication, or if you like to re
 
 ## License
 
-MIT License. Copyright (c) 2012 [Jari Jokinen](http://jarijokinen.com). See [LICENSE](https://github.com/jarijokinen/active_application/blob/master/LICENSE.txt) for further details.
+MIT License. Copyright (c) 2012 - 2013 [Jari Jokinen](http://jarijokinen.com). See [LICENSE](https://github.com/jarijokinen/active_application/blob/master/LICENSE.txt) for further details.
