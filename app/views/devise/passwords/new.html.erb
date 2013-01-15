@@ -1,9 +1,0 @@
-<% @title = t("devise.forgot_password", :default => "Forgot Your Password?") %>
-
-<%= semantic_form_for(resource, :as => resource_name, 
-  :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= f.inputs :email %>
-  <%= f.actions do %>
-    <%= f.action :submit, label: t("devise.send_reset_password_instructions", :default => "Send me reset password instructions") %>
-  <% end %>
-<% end %>
