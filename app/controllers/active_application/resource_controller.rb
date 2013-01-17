@@ -1,7 +1,4 @@
 class ActiveApplication::ResourceController < SimpleResource::BaseController
-  defaults route_prefix: ""
-  before_filter :authenticate_user!
-
   has_scope :page, default: 1
 
   def render_not_found
