@@ -1,4 +1,4 @@
-class ActiveApplication::UserResourceController < SimpleResource::UserController
+class ActiveApplication::UserResourceController < SimpleResource::UserResourceController
   defaults route_prefix: ""
   before_filter :exclude_fields
 
