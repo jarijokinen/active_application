@@ -26,9 +26,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency "less-rails", "~> 2.2.6"
   gem.add_dependency "modernizr-rails", "~> 2.6.1"
   gem.add_dependency "rolify", "~> 3.2.0"
-  gem.add_dependency "simple_resource", "~> 0.4.0"
+  gem.add_dependency "simple_resource", "~> 0.5.0"
   gem.add_dependency "stringex", "~> 1.5.1"
-  gem.add_dependency "therubyracer", "~> 0.11.2"
+  gem.add_dependency "therubyracer", "~> 0.11.3"
   gem.add_dependency "twitter-bootstrap-rails", "~> 2.2.0"
 
   gem.add_development_dependency "capybara", "1.1.4"
