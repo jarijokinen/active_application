@@ -1,5 +1,9 @@
 # Changelog
 
+0.3.0 (January 17, 2013)
+
+* Removed stuff that has been moved to simple_resource
+
 0.2.0 (January 17, 2013)
 
 * Uses rolify and stringex gems
