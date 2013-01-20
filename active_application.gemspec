@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "devise-formtastic", "~> 0.0.1"
   gem.add_dependency "formtastic-bootstrap", "~> 2.0.0"
   gem.add_dependency "has_scope", "~> 0.5.1"
-  gem.add_dependency "jquery-rails", "~> 2.1.4"
+  gem.add_dependency "jquery-rails", "~> 2.2.0"
   gem.add_dependency "kaminari", "~> 0.14.1"
   gem.add_dependency "less-rails", "~> 2.2.6"
   gem.add_dependency "modernizr-rails", "~> 2.6.1"
