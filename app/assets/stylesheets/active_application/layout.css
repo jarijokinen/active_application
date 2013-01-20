@@ -1,17 +1,9 @@
-body {
-  padding-top: 60px;
-}
-@media (max-width: 979px) {
-  body {
-    padding-top: 0;
-  }
-}
 .footer {
   font-size: 10px;
   padding: 5px 0 30px 0;
   border-top: 1px solid #eee;
   margin-top: 30px;
 }
-table .actions {
+.collection tbody tr td:last-child {
   text-align: right;
 }
