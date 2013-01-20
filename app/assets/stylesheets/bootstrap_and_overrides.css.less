@@ -1,5 +1,14 @@
 @import "twitter/bootstrap/bootstrap";
-@import "twitter/bootstrap/responsive";
+
+@-ms-viewport{
+  width: device-width;
+}
+@import "twitter/bootstrap/variables.less";
+@import "twitter/bootstrap/mixins.less";
+@import "twitter/bootstrap/responsive-utilities.less";
+@import "twitter/bootstrap/responsive-768px-979px.less";
+@import "twitter/bootstrap/responsive-767px-max.less";
+@import "twitter/bootstrap/responsive-navbar.less";
 
 // Set the correct sprite paths
 @iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
