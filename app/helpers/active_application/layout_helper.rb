@@ -19,5 +19,15 @@ module ActiveApplication
       end
       html.join.html_safe
     end
+
+    def layout_title
+      (@title.blank? ? "" : "#{@title} | ") + application_name
+    end
+
+    def layout_page_header
+      unless @title.blank?
+        content_tag(:div, content_tag(:h1, @title), class: "page-header")
+      end
+    end
   end
 end
