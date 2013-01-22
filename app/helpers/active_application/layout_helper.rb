@@ -11,10 +11,11 @@ module ActiveApplication
         else
           flash_class = key.to_s
         end
+        close_button = 
+          '<button type="button" class="close" data-dismiss="alert">&times;</a>'
         html << content_tag(:div,
-          msg.html_safe + ' <a class="close" href="#" data-dismiss="alert">&times;</a>'.html_safe,
-          class: ["fade", "in", "alert", flash_class],
-          "data-alert" => "alert"
+          close_button.html_safe + ' ' + msg.html_safe,
+          class: ["alert", flash_class, "fade", "in"]
         )
       end
       html.join.html_safe
