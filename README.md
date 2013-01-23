@@ -84,7 +84,7 @@ ActiveApplication::Backend* controllers:
 
 Other controllers:
 
-    layout "active_application/public"
+    layout "application"
 
 ## Support
 

@@ -1,7 +1,6 @@
 module ActiveApplication
   module Public
     class BaseController < ActiveApplication::BaseController
-      layout "active_application/public"
       before_filter :set_public_locale
       
       def not_found
