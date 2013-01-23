@@ -1,5 +1,5 @@
 Dummy::Application.routes.draw do
-  namespace :backend do
+  namespace :backend, path: "admin" do
     resources :posts
   end
 
@@ -19,7 +19,7 @@ Dummy::Application.routes.draw do
     resources :categories
   end
 
-  active_application_routes
+  active_application_routes :account, :backend
   
   root to: "posts#index"
 end
