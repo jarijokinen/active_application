@@ -14,7 +14,6 @@ module ActiveApplication #:nodoc:
         end
 
         unless backend_path.nil?
-          path = Configuration.module_paths[:backend]
           namespace :backend, path: backend_path do
             root to: "dashboard#index"
           end
