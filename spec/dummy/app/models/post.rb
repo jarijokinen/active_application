@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :category
   has_many :comments
-  attr_accessible :content, :title
+  attr_accessible :category_id, :content, :title
 
   scope :latest, -> { order("created_at DESC").limit(10) }
 

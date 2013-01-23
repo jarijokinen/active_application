@@ -28,11 +28,11 @@ module ActiveApplication #:nodoc:
           # Registrations
           get  "/#{account_path}/new"    => "devise/registrations#new", 
             as: :new_user_registration
-          post "/#{account_path}/new"    => "devise/registrations#create", 
+          post "/#{account_path}"        => "devise/registrations#create", 
             as: :user_registration
           get  "/#{account_path}/edit"   => "devise/registrations#edit",
             as: :edit_user_registration
-          put  "/#{account_path}/edit"   => "devise/registrations#update"
+          put  "/#{account_path}"        => "devise/registrations#update"
        
           # Sessions
           get  "/#{account_path}/login"  => "devise/sessions#new",
