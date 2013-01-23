@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+  <head>
+    <title><%= layout_title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <%= stylesheet_link_tag "active_application/public", media: "all" %>
+    <%= javascript_include_tag "active_application/public" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <% if current_page?(root_path) %>
+          <h1 id="logo"><%= application_name %></h1>
+        <% else %>
+          <a href="/" id="logo"><%= application_name %></a>
+        <% end %>
+      </header>
+      <div class="row" id="main">
+        <section id="content" class="span8">
+          <%= layout_flash %>
+          <%= layout_page_header %>
+          <%= yield %>
+        </section>
+        <aside id="sidebar" class="span4">
+          <%= render "layouts/active_application/public/sidebar" %>
+        </aside>
+      </div>
+      <footer id="footer" class="footer">
+        &copy; <%= Time.now.year %> <%= application_name %>
+      </footer>
+    </div>
+  </body>
+</html>

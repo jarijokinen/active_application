@@ -1,0 +1,15 @@
+<h2>Latest Posts</h2>
+
+<ul>
+  <% Post.latest.each do |post| %>
+    <li><%= link_to(post, post) %></li>
+  <% end %>
+</ul>
+
+<h2>Categories</h2>
+
+<ul>
+  <% Category.all.each do |category| %>
+    <li><%= link_to(category, category) %></li>
+  <% end %>
+</ul>

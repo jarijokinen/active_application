@@ -1,0 +1,15 @@
+<% @title ||= collection_title %>
+
+<section class="collection">
+  <% collection.each do |resource| %>
+    <article>
+      <%= link_to(resource, resource) %>
+    </article>
+  <% end %>
+</section>
+
+<%= 
+  if defined?(Kaminari)  
+    paginate(collection)
+  end
+%>

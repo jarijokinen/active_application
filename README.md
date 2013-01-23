@@ -8,6 +8,7 @@ NOTICE: EXPERIMENTAL ALPHA VERSION, DO NOT USE IN PRODUCTION
 
 * Authentication by Devise
 * Authorization by CanCan
+* Role management by rolify
 * Formtastic as a form builder
 * Twitter Bootstrap as a CSS framework
 * Resource handling by SimpleResource
@@ -31,6 +32,59 @@ And then execute:
 Run generator:
 
     $ rails g active_application:install
+
+## Usage
+
+### Roles
+
+    :customer           Ability to manage own resources
+    :administrator      Ability to manage everything
+    (no role)           Ability to view all resources by default (index, show)
+
+### Namespaces
+
+    :customer           Requires authentication and :customer role
+    :backend            Requires authentication and :administrator role
+    (no namespace)      Requires nothing
+
+Route namespaces
+
+    /customer/blogs     customer/blogs#index      customer_blogs_path
+    /customer/posts     customer/posts#index      customer_posts_path
+    
+    /backend/blogs      backend/blogs#index       backend_blogs_path
+    /backend/posts      backend/posts#index       backend_posts_path
+    
+    /blogs              blogs#index               blogs_path
+    /posts              posts#index               posts_path
+
+Controller namespaces
+
+    # app/controllers/customer/
+    Customer::BlogsController < ActiveApplication::Customer::UserResourceController
+    Customer::PostsController < ActiveApplication::Customer::ResourceController
+
+    # app/controllers/backend/
+    Backend::BlogsController < ActiveApplication::Backend::ResourceController
+    Backend::PostsController < ActiveApplication::Backend::ResourceController
+
+    # app/controllers/
+    BlogsController < ActiveApplication::Public::ResourceController
+    PostsController < ActiveApplication::Public::ResourceController
+
+### Layouts
+
+ActiveApplication::Customer* controllers:
+
+    layout "active_application/customer"
+
+ActiveApplication::Backend* controllers:
+
+    layout "active_application/backend"
+
+Other controllers:
+
+    layout "active_application/public"
 
 ## Support
 

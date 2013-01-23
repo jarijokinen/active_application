@@ -1,3 +1,4 @@
 class User < ActiveApplication::User
-  has_many :projects
+  rolify
+  has_many :blogs
 end

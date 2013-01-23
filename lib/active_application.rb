@@ -11,6 +11,7 @@ require "simple_resource"
 require "stringex"
 require "twitter-bootstrap-rails"
 require "active_application/engine"
+require "active_application/controller_methods"
 require "active_application/routes"
 require "active_application/version"
 

@@ -1,0 +1,20 @@
+<% @title = resource.title %>
+
+<%= simple_format resource.content %>
+
+<h2>Comments</h2>
+
+<% if resource.comments.count < 1 %>
+  No comments yet.
+<% else %>
+  <%= render "comments", collection: resource.comments %>
+<% end %>
+
+<h3>Leave a comment</h3>
+
+<%= semantic_form_for [resource, resource.comments.new] do |f| %>
+    <%= f.inputs :content %>
+    <%= f.actions do %>
+      <%= f.action :submit %>
+    <% end %>
+<% end %>

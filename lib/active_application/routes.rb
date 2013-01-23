@@ -1,10 +1,13 @@
 module ActiveApplication
   module Routes
-    def active_application_routes
+    def active_application_routes(*options)
       scope module: "active_application" do
+        namespace :customer do
+          root to: "dashboard#index"
+        end
+
         namespace :backend do
-          resources :users 
-          root to: "dashboard#index", as: :root
+          root to: "dashboard#index"
         end
       end
 
@@ -25,8 +28,6 @@ module ActiveApplication
         get "reset/:reset_password_token" => "devise/passwords#edit", as: :edit_user_password
         put "reset" => "devise/passwords#update"
       end
-      
-      root to: "active_application/public#index"
     end
   end
 end

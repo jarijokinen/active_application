@@ -1,0 +1,7 @@
+<% @title ||= collection_title %>
+
+<%=
+  unless collection.blank?
+    render_collection_table
+  end
+%>

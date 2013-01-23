@@ -12,7 +12,7 @@ module ActiveApplication
     end
 
     config.after_initialize do |app|
-      app.routes.append { match "*path", to: "active_application/public#not_found" }
+      app.routes.append { match "*path", to: "active_application/public/base#not_found" }
     end
 
     config.app_generators do |g|

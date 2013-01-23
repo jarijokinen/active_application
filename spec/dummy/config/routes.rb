@@ -1,12 +1,25 @@
 Dummy::Application.routes.draw do
-  resources :milestones do
-    resources :tasks
+  namespace :backend do
+    resources :posts
   end
 
-  resources :projects do
-    resources :milestones
-    resources :tasks
+  namespace :customer do
+    resources :posts
+  end
+
+  resources :posts do
+    resources :comments
+  end
+
+  resources :categories do
+    resources :posts
+  end
+
+  resources :blogs do
+    resources :categories
   end
 
   active_application_routes
+  
+  root to: "posts#index"
 end
