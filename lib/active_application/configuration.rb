@@ -20,5 +20,21 @@ module ActiveApplication #:nodoc:
       backend:  "backend",
       customer: "customer"
     }
+
+    # Locales for modules
+    #
+    # Default values
+    #
+    #   module_locales = {
+    #     default:  :en,
+    #     backend:  :en,
+    #     customer: :en
+    #   }
+    mattr_accessor :module_locales
+    self.module_locales = {
+      default:  :en,
+      backend:  :en,
+      customer: :en
+    }
   end
 end
