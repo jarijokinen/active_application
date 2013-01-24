@@ -1,0 +1,9 @@
+Hi,
+
+Please confirm your email through the URL below:
+
+<%= confirmation_url(@resource, confirmation_token: @resource.confirmation_token) %>
+
+Thanks,
+
+<%= I18n.t("application.name") %>
