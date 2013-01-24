@@ -17,5 +17,21 @@ module ActiveApplication
         return render_not_found
       end
     end
+
+    def set_default_locale
+      set_locale Configuration.module_locales[:default]
+    end
+    
+    def set_customer_locale
+      set_locale Configuration.module_locales[:customer]
+    end
+
+    def set_backend_locale
+      set_locale Configuration.module_locales[:backend]
+    end
+
+    def set_locale(locale)
+      I18n.locale = locale
+    end
   end
 end
