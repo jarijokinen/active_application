@@ -1,9 +1,11 @@
 Dummy::Application.routes.draw do
   namespace :backend do
+    resources :blogs
     resources :posts
   end
 
   namespace :customer do
+    resources :blogs
     resources :posts
   end
 

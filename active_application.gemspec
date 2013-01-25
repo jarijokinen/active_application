@@ -28,6 +28,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "rolify", "~> 3.2.0"
   gem.add_dependency "simple_resource", "~> 0.6.0"
   gem.add_dependency "stringex", "~> 1.5.1"
+  gem.add_dependency "strong_parameters", "~> 0.1.6"
   gem.add_dependency "therubyracer", "~> 0.11.3"
   gem.add_dependency "twitter-bootstrap-rails", "~> 2.2.0"
 

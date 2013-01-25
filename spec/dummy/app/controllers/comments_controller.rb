@@ -4,4 +4,10 @@ class CommentsController < ActiveApplication::Public::ResourceController
   def create
     create! { parent_url }
   end
+
+  private
+
+  def resource_params
+    params.require(:comment).permit(:content)
+  end
 end

@@ -1,3 +1,6 @@
 en:
   application:
     name: "Active Application"
+  devise:
+    confirmations:
+      confirmed_without_sign_in: "Your account was successfully confirmed."

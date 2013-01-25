@@ -13,6 +13,11 @@ module ActiveApplication
 
     config.after_initialize do |app|
       app.routes.append { match "*path", to: "active_application/public/base#not_found" }
+      # Add StrongParameters support to Rails 3
+      # FIXME: Must be loaded later to overwrite default value in config/application.rb
+      # app.config.active_record.whitelist_attributes = false
+      # Not supported yet by the strong_parameters gem
+      # config.action_controller.action_on_unpermitted_parameters = :log
     end
 
     config.app_generators do |g|
