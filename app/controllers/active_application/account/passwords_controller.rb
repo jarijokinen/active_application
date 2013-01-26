@@ -1,6 +1,8 @@
 module ActiveApplication
   module Account
     class PasswordsController < Devise::PasswordsController
+      layout "active_application/account"
+
       private
 
       def resource_params

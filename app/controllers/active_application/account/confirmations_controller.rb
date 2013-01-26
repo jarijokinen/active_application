@@ -1,6 +1,8 @@
 module ActiveApplication
   module Account
     class ConfirmationsController < Devise::ConfirmationsController
+      layout "active_application/account"
+
       def show
         self.resource = resource_class.confirm_by_token(params[:confirmation_token])
 

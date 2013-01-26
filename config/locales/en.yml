@@ -2,5 +2,12 @@ en:
   application:
     name: "Active Application"
   devise:
+    buttons:
+      sign_in: "Log in"
     confirmations:
       confirmed_without_sign_in: "Your account was successfully confirmed."
+    links:
+      sign_out: "Log out"
+    titles:
+      my_account: "My account"
+      sign_in: "Log in"
