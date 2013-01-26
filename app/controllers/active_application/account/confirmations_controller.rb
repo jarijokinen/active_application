@@ -1,6 +1,7 @@
 module ActiveApplication
   module Account
     class ConfirmationsController < Devise::ConfirmationsController
+      include ActiveApplication::ControllerMethods
       layout "active_application/account"
 
       def show
@@ -13,7 +14,7 @@ module ActiveApplication
           respond_with_navigational(resource.errors, :status => :unprocessable_entity){ render :new }
         end
       end
-
+      
       protected
 
       def after_confirmation_path_for(resource_name, resource)
