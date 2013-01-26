@@ -2,6 +2,7 @@ module ActiveApplication
   module Account
     class ConfirmationsController < Devise::ConfirmationsController
       include ActiveApplication::ControllerMethods
+      before_filter :set_default_locale
       layout "active_application/account"
 
       def show

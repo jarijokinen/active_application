@@ -2,6 +2,7 @@ module ActiveApplication
   module Account
     class PasswordsController < Devise::PasswordsController
       include ActiveApplication::ControllerMethods
+      before_filter :set_default_locale
       layout "active_application/account"
 
       private
