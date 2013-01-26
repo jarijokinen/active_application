@@ -14,9 +14,12 @@ module ActiveApplication
       def exclude_user_id_field
         @exclude_fields = %w(user_id)
       end
-
+      
       def resource_params
-        permit_attributes = resource_class.attribute_names - %w(id created_at updated_at user_id)
+        permit_attributes = 
+          resource_class.attribute_names - 
+          %w(id created_at updated_at user_id) +
+          resource_params_additions
         params.require(controller_name.tableize.singularize.to_sym).permit(*permit_attributes)
       end
 

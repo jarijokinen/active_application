@@ -9,7 +9,7 @@ module ActiveApplication
       has_scope :page, default: 1
     
       private
-
+      
       def resource_params
         params.require(controller_name.tableize.singularize.to_sym).permit!
       end

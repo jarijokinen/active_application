@@ -11,7 +11,10 @@ module ActiveApplication
       private
 
       def resource_params
-        permit_attributes = resource_class.attribute_names - %w(id created_at updated_at)
+        permit_attributes = 
+          resource_class.attribute_names - 
+          %w(id created_at updated_at) +
+          resource_params_additions
         params.require(controller_name.tableize.singularize.to_sym).permit(*permit_attributes)
       end
       

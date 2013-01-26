@@ -1,5 +1,7 @@
 module ActiveApplication
   module ControllerMethods
+    private
+
     def render_not_found
       render "active_application/public/base/not_found", status: :not_found, layout: false
     end
@@ -32,6 +34,10 @@ module ActiveApplication
 
     def set_locale(locale)
       I18n.locale = locale
+    end
+      
+    def resource_params_additions
+      []
     end
   end
 end
