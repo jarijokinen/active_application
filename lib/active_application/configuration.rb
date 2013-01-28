@@ -21,6 +21,22 @@ module ActiveApplication #:nodoc:
       customer: "customer"
     }
 
+    # Controller namespaces for modules
+    #
+    # Default values
+    #
+    #   module_namespaces = {
+    #     account:  "active_application/account",
+    #     backend:  "active_application/backend",
+    #     customer: "active_application/customer"
+    #   }
+    mattr_accessor :module_namespaces
+    self.module_namespaces = {
+      account:  "active_application/account",
+      backend:  "not_implemented_yet",        # TODO: Not implemented yet
+      customer: "not_implemented_yet"         # TODO: Not implemented yet
+    }
+
     # Locales for modules
     #
     # Default values
@@ -41,7 +57,7 @@ module ActiveApplication #:nodoc:
     #
     # Default values
     #
-    #   module_locales = {
+    #   module_layouts = {
     #     account:  "active_application/account",
     #     backend:  "active_application/backend",
     #     customer: "active_application/customer"
