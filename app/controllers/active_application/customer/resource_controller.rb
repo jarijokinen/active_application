@@ -6,7 +6,7 @@ module ActiveApplication
       before_filter :set_customer_locale
       before_filter :require_customer_role
       defaults route_prefix: ""
-      has_scope :page, default: 1
+      has_scope :page, default: 1, only: :index
       
       private
 

@@ -6,7 +6,7 @@ module ActiveApplication
       before_filter :set_backend_locale
       before_filter :require_administrator_role
       defaults route_prefix: ""
-      has_scope :page, default: 1
+      has_scope :page, default: 1, only: :index
     
       private
       

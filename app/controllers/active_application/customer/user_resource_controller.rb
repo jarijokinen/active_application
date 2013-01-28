@@ -7,7 +7,7 @@ module ActiveApplication
       before_filter :require_customer_role
       before_filter :exclude_user_id_field
       defaults route_prefix: ""
-      has_scope :page, default: 1
+      has_scope :page, default: 1, only: :index
       
       private
 
