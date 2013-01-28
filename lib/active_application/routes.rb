@@ -21,7 +21,7 @@ module ActiveApplication #:nodoc:
       end
 
       unless account_path.nil?
-        ns = ActiveApplication::Configuration.controller_namespaces[:account]
+        ns = ActiveApplication::Configuration.module_namespaces[:account]
 
         devise_for :users, 
           skip: [:registrations, :sessions, :confirmations, :passwords]
