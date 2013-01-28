@@ -3,7 +3,7 @@ module ActiveApplication
     class RegistrationsController < Devise::RegistrationsController
       include ActiveApplication::ControllerMethods
       before_filter :set_default_locale
-      layout "active_application/account"
+      layout layout_for_account
 
       private
 

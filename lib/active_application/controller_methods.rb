@@ -39,5 +39,17 @@ module ActiveApplication
     def resource_params_additions
       []
     end
+    
+    def layout_for_account
+      set_locale Configuration.module_layouts[:account]
+    end
+
+    def layout_for_customer
+      set_locale Configuration.module_layouts[:customer]
+    end
+    
+    def layout_for_backend
+      set_locale Configuration.module_layouts[:backend]
+    end
   end
 end

@@ -36,5 +36,21 @@ module ActiveApplication #:nodoc:
       backend:  :en,
       customer: :en
     }
+    
+    # Layouts for modules
+    #
+    # Default values
+    #
+    #   module_locales = {
+    #     account:  "active_application/account",
+    #     backend:  "active_application/backend",
+    #     customer: "active_application/customer"
+    #   }
+    mattr_accessor :module_layouts
+    self.module_layouts = {
+      account:  "active_application/account",
+      backend:  "active_application/backend",
+      customer: "active_application/customer"
+    }
   end
 end

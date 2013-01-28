@@ -3,7 +3,7 @@ module ActiveApplication
     class ConfirmationsController < Devise::ConfirmationsController
       include ActiveApplication::ControllerMethods
       before_filter :set_default_locale
-      layout "active_application/account"
+      layout layout_for_account
 
       def show
         self.resource = resource_class.confirm_by_token(params[:confirmation_token])
